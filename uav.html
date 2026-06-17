@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJI - Official Website</title>
+  <base href="./">
+  <link rel="stylesheet" href="uav.css">
+  <style>
+    /* Fallback nếu mở bằng file:// hoặc CSS chưa load kịp */
+    body { margin: 0; font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; }
+    noscript { display: block; padding: 16px; background: #fff3cd; text-align: center; }
+  </style>
+</head>
+<body>
+  <noscript>Trang cần bật JavaScript để slider hoạt động. Nội dung vẫn hiển thị bình thường.</noscript>
+
+  <!-- Sticky nav bar -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="logo" aria-label="DJI Home">
+        <svg viewBox="0 0 80 24" fill="currentColor" aria-hidden="true">
+          <text x="0" y="20" font-family="Inter, sans-serif" font-size="22" font-weight="700" letter-spacing="2">DJI</text>
+        </svg>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#opisanie-proekta">Описание проекта</a></li>
+          <li><a href="#apparatnoe-obespechenie">Аппаратное обеспечение</a></li>
+          <li><a href="#programmnoe-obespechenie">Программное обеспечение</a></li>
+          <li><a href="#neobhodimye-elementy" title="Необходимые элементы для сбора квадрокоптера">Необходимые элементы для сбора квадрокоптера</a></li>
+          <li><a href="#vneshniy-vid-stenda">Внешний вид стенда</a></li>
+          <li><a href="#video-eksperiment">Видео на эксперименте</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 3.2 Hero — 1 video UAV_bay -->
+    <section class="hero" id="heroSlider">
+      <div class="hero-slides" id="heroSlides">
+        <article class="hero-slide active has-video" data-index="0">
+          <div class="hero-bg">
+            <video class="bg-video" muted playsinline loop preload="auto">
+              <source src="./videos/UAV_bay.mp4" type="video/mp4">
+            </video>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3.3 Lưới 4 ô sản phẩm -->
+    <section class="product-grid">
+      <div class="container">
+        <h2 class="product-grid-heading" id="opisanie-proekta">Описание проекта</h2>
+        <p class="project-intro">Это учебный стенд квадрокоптера. Квадрокоптер закреплён на неподвижной оси и может вращаться только по тангажу. В аппаратной части есть контроллер на ESP32, который соединяется с компьютером через ESP8266 по Wi‑Fi. Также есть датчик MPU6050 и четыре коллекторных двигателя с регулировкой тяги. На компьютере запускается наземная станция. Это графический интерфейс на Qt5. Через него можно задать желаемый угол, включить или выключить двигатели. На экране отображаются угол, угловая скорость и управляющий момент. Также можно менять параметры и сохранять их в памяти контроллера. Для оценки ориентации используются несколько фильтров: кватернионный фильтр, низкочастотная фильтрация сигналов акселерометра и гироскопа, комплементарный фильтр и фильтр Калмана. Все их параметры можно менять через графический интерфейс. Для автоматического удержания и поворота по тангажу есть четыре регулятора: двухконтурный PD‑PI, PID, SMC и модифицированный SMC с плавным приближением к скользящей поверхности. Стенд нужен для того, чтобы безопасно сравнивать эти алгоритмы, настраивать фильтры, записывать переходные процессы и проводить лабораторные работы без риска свободного полёта. В репозитории есть прошивки, программа наземной станции и инструкции по подключению и проведению экспериментов.</p>
+        <div class="grid-2x2">
+          <div class="grid-block">
+            <h2 class="product-grid-heading" id="apparatnoe-obespechenie">Аппаратное обеспечение</h2>
+            <div class="grid-row grid-row--5">
+            <article class="product-card">
+              <img src="images/8.jpg" alt="Стенд">
+              <p class="product-card-caption"><strong>10 апреля</strong> мы заказали этот профиль через интернет, чтобы сделать из него рамы для стенда</p>
+            </article>
+            <article class="product-card has-video">
+              <video class="product-card-video" muted playsinline loop preload="metadata">
+                <source src="./videos/3.mp4" type="video/mp4">
+              </video>
+              <p class="product-card-caption"><strong>17 апреля</strong> профиль был доставлен, после чего произведена его резка (разделение) на части для последующей сборки конструкций.</p>
+            </article>
+            <article class="product-card">
+              <img src="images/7.jpg" alt="Стенд">
+              <p class="product-card-caption"><strong>24 апреля</strong>, после разделения всех частей профиля, была выполнена сборка, в результате которой получена следующая внешняя конструкция</p>
+            </article>
+            <article class="product-card">
+              <img src="images/9.png" alt="Стенд">
+              <p class="product-card-caption"><strong>26 апреля</strong> мы спроектировали в SolidWorks 3D-модели для крепления квадрокоптера на стержне, а затем распечатали их на 3D-принтере</p>
+            </article>
+            <article class="product-card">
+              <img src="images/6.jpg" alt="Стенд">
+              <p class="product-card-caption">Разработана печатная плата (PCB) с посадочным местом для микроконтроллера ESP32 WROOM</p>
+            </article>
+            </div>
+          </div>
+          <div class="grid-row grid-row--5">
+            <article class="product-card">
+              <img src="./images/detal_UAV.jpg" alt="Стенд">
+              <p class="product-card-caption"><strong>3 мая</strong> на печатную плату были смонтированы и запаяны все необходимые компоненты, включая датчик IMU, конденсаторы, резисторы и др.</p>
+            </article>
+            <article class="product-card">
+              <img src="./images/UAV_to.jpg" alt="Стенд">
+              <p class="product-card-caption"><strong>06 мая</strong>, после завершения пайки элементов на плату, провели тестирование: проверили питание, работу всех моторов и выполнили комплексную проверку функционирования системы</p>
+            </article>
+            <article class="product-card">
+              <img src="images/5.jpg" alt="Стенд">
+              <p class="product-card-caption"><strong>12 мая</strong> завершающий этап: распечатали корпус и крылья, вмонтировали плату. Квадрокоптер готов к использованию!</p>
+            </article>
+            <article class="product-card">
+              <img src="images/4.jpg" alt="Стенд">
+              <p class="product-card-caption"><strong>16 мая</strong>, после завершения сборки, квадрокоптер был закреплён на стенде, и мы приступили к его стендовым испытаниям</p>
+            </article>
+            <article class="product-card">
+              <img src="images/3.jpg" alt="Стенд">
+              <p class="product-card-caption"></p>
+            </article>
+          </div>
+          <div class="grid-block">
+            <h2 class="product-grid-heading" id="programmnoe-obespechenie">Программное обеспечение</h2>
+            <div class="grid-row grid-row--3">
+            <article class="product-card">
+              <img src="images/10.png" alt="Стенд">
+              <p class="product-card-caption"><strong>26 мая</strong> проведена разработка и правка кода на C++ (на базе <a href="https://github.com/okalachev/flix" target="_blank" rel="noopener noreferrer">Flix</a>) для управления квадрокоптером и GUI Qt5</p>
+            </article>
+            <article class="product-card">
+              <img src="images/11.png" alt="Стенд">
+              <p class="product-card-caption"><strong>02 июня</strong> разработан графический интерфейс на Qt5 для управления положением квадрокоптера</p>
+            </article>
+            <article class="product-card">
+              <img src="images/12.png" alt="Стенд">
+              <p class="product-card-caption">Графический интерфейс на Qt5: отправка команд на квадрокоптер и приём телеметрии по Wi-Fi (ESP8266 ↔ ESP32)</p>
+            </article>
+            <article class="product-card">
+              <img src="images/13.png" alt="Стенд">
+              <p class="product-card-caption"><strong>10 июня</strong> проведены успешные стендовые испытания полёта с применением PID-регулятора. Помимо визуализации сигналов на экране, в ходе испытаний получен переходный процесс, который был сохранён в лог-файл на компьютере</p>
+            </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.5 Компоненты — сетка 3×3 -->
+    <section class="components-grid">
+      <div class="container">
+        <h2 class="product-grid-heading" id="neobhodimye-elementy">Необходимые элементы для сбора квадрокоптера</h2>
+        <div class="components-rows">
+          <div class="grid-row grid-row--3col">
+            <article class="product-card">
+              <img src="images/3D-uav.jpg" alt="3D-принтер">
+              <p class="product-card-caption">3D-принтер,</p>
+            </article>
+            <article class="product-card">
+              <img src="images/esp32.jpeg" alt="Контроллер ESP32">
+              <p class="product-card-caption">Контроллер ESP32</p>
+            </article>
+            <article class="product-card">
+              <img src="images/mpu6050.png" alt="6-DOF датчик IMU">
+              <p class="product-card-caption">6-DOF датчик IMU</p>
+            </article>
+          </div>
+          <div class="grid-row grid-row--3col">
+            <article class="product-card">
+              <img src="images/conv.jpeg" alt="Преобразователь 12В -> 5B">
+              <p class="product-card-caption">Преобразователь 12В -&gt; 5B</p>
+            </article>
+            <article class="product-card">
+              <img src="images/ESP8266.jpeg" alt="ESP8266">
+              <p class="product-card-caption">ESP8266</p>
+            </article>
+            <article class="product-card">
+              <img src="images/Qt.png" alt="Графический интерфейс Qt5">
+              <p class="product-card-caption">Графический интерфейс Qt5</p>
+            </article>
+          </div>
+          <div class="grid-row grid-row--3col">
+            <article class="product-card">
+              <img src="images/esc.jpg" alt="контроллер скорости мотора">
+              <p class="product-card-caption">контроллер скорости мотора,</p>
+            </article>
+            <article class="product-card">
+              <img src="images/блок_питания.jpeg" alt="Блок питания">
+              <p class="product-card-caption">Блок питания</p>
+            </article>
+            <article class="product-card">
+              <img src="images/двигатель.jpeg" alt="бесколлекторный двигатель">
+              <p class="product-card-caption">бесколлекторный двигатель</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.6 Standing at the Forefront of Innovation -->
+    <section class="innovation">
+      <div class="container">
+        <h2 class="section-title" id="vneshniy-vid-stenda">Внешний вид стенда</h2>
+        <div class="innovation-grid">
+          <article class="innovation-card">
+            <img src="images/innovation-1.jpg?v=1" alt="Стенд 1" loading="eager">
+          </article>
+          <article class="innovation-card">
+            <img src="images/innovation-2.jpg?v=1" alt="Стенд 2" loading="eager">
+          </article>
+          <article class="innovation-card">
+            <img src="images/innovation-3.jpg?v=1" alt="Стенд 3" loading="eager">
+          </article>
+          <article class="innovation-card">
+            <img src="images/innovation-4.jpg?v=1" alt="Стенд 4" loading="eager">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.7 Explore DJI Products in Different Fields -->
+    <section class="fields">
+      <div class="container">
+        <h2 class="section-title" id="video-eksperiment">Видео на эксперименте</h2>
+        <div class="fields-grid">
+          <article class="field-card field-card--video has-video">
+            <video class="field-card-video" muted playsinline loop preload="metadata">
+              <source src="./videos/1.mp4" type="video/mp4">
+            </video>
+          </article>
+          <article class="field-card field-card--video has-video">
+            <video class="field-card-video" muted playsinline loop preload="metadata">
+              <source src="./videos/2.mp4" type="video/mp4">
+            </video>
+          </article>
+          <article class="field-card field-card--video has-video">
+            <video class="field-card-video" muted playsinline loop preload="metadata">
+              <source src="./videos/ctrl_slide.mp4" type="video/mp4">
+            </video>
+          </article>
+          <article class="field-card field-card--video has-video">
+            <video class="field-card-video" muted playsinline loop preload="metadata">
+              <source src="./videos/test_UAV_1_kanal.mp4" type="video/mp4">
+            </video>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox xem ảnh/video full size -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Media viewer">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
+  <script src="./uav.js"></script>
+</body>
+</html>
