@@ -1232,11 +1232,11 @@ img {
   .subscribe-form button { border-radius: var(--radius); margin-top: 8px; }
 }
 
-/* ===== Grant acknowledgment footer ===== */
+/* ===== Grant acknowledgment ===== */
 .grant-footer {
-  padding: 36px 16px 44px;
-  background: var(--bg-section);
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 32px 16px;
+  background: var(--bg-main);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .grant-footer p {
