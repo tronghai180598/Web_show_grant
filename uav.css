@@ -1232,6 +1232,22 @@ img {
   .subscribe-form button { border-radius: var(--radius); margin-top: 8px; }
 }
 
+/* ===== Grant acknowledgment footer ===== */
+.grant-footer {
+  padding: 36px 16px 44px;
+  background: var(--bg-section);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.grant-footer p {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
 /* ===== Lightbox — xem ảnh/video full size ===== */
 .media-zoomable,
 .hero-slide.has-video .hero-bg,
