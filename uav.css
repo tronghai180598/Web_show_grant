@@ -1243,7 +1243,8 @@ img {
   max-width: 920px;
   margin: 0 auto;
   text-align: center;
-  font-size: 14px;
+  font-size: 18.2px;
+  font-weight: 700;
   line-height: 1.65;
   color: var(--text-secondary);
 }
